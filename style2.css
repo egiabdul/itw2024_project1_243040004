@@ -1,0 +1,772 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:  "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fefefe;
+    font-family:  "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    z-index: 9999999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+}
+
+section {
+    min-height: 100vh;
+    padding: 100px 9% 100px;
+}
+
+.navbar {
+    position: relative;
+    height: 80px;
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: #0e2431;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-items a{
+    color: #0e2431;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-items a:not(:last-child) {
+    margin-right: 50px;
+}
+
+.nav-items a:hover {
+    color: #00F5FF;
+    border-bottom: 2px solid;
+}
+
+.home {
+    position: relative;
+    min-height: 100vh;
+    max-width: 1250px;
+    flex-direction: column;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.home-container .icon {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+.home-container .icon a {
+    color: black;
+    font-size: 24px;
+    margin: 10px 0 ;
+}
+
+.home-container .icon a:hover {
+    color:  #00F5FF;
+}
+
+.home-container .deskripsi h2 {
+    font-size: 64px;
+    color: #0e2431;
+    font-weight: 600;
+    line-height: 70px;
+}
+
+span {
+    color: #00F5FF;
+}
+
+.home-container .deskripsi h3 {
+    color: #777;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+.home-container .deskripsi p {
+    font-size: 16px;
+    color: #777;
+    max-width: 350px;
+}
+
+.home-container .home-img {
+    position: relative;
+}
+
+.home-container .home-img img {
+    width: 90%;
+}
+
+
+.btn {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #00F5FF;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 20px 30px;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: black;
+    transition: 0.5s;
+}
+
+.btn i:hover {
+    color: #00F5FF;
+}
+
+.home .scroll-down {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    /* margin-left: 550px; */
+}
+
+.home .scroll-down i{
+    color: #00F5FF;
+    font-size: 18px;
+    animation: arrow-down ease 2s infinite;
+}
+
+@keyframes arrow-down {
+    0% {
+        transform: translateY(0);
+    }
+    
+    30% {
+        transform: translateY(10px);
+    }
+}
+
+.about {
+    position: relative;
+    font-weight: 50px;
+    color: #777;
+    text-align: center;
+    margin: 30px;
+    margin-top: 100px;
+    padding: 100px;
+    gap: 10px;
+    border-radius: 20px;
+}
+
+.about-header {
+    font-size: 32px;
+    color: #0e2431;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.about-text{
+    color: #777;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Education */
+
+.education-header {
+    font-size: 5rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.education {
+    padding: 100px 15px;
+
+}
+
+
+.education h2 {
+    margin-bottom: 5rem;
+}
+
+.timeline-items {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    left: calc(50% - 1px);
+    background-color: #00F5FF;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+    width: 21px;
+    height: 21px;
+    background-color: #00F5FF;  
+    box-shadow: 0 0 25px var(#00F5FF),
+                0 0 50px var(#00F5FF);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0e2431;
+    margin: 6px 0 15px;
+}
+
+.timeline-content {
+    background-color: aqua;
+    border: 3px solid var(#00F5FF);
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px var(#00F5FF);
+    cursor: pointer;
+    transition: 0 .3s ease-in-out;
+}
+
+.timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(#00F5FF);
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    color: #0e2431;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+.timeline-content p {
+    color: #0e2431;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+/* Skill */
+.skills {
+    position: relative;
+    place-items: center;
+    min-height: 1200px;
+}
+
+.skills-header {
+    font-size: 64px;
+    text-align: center;
+}
+
+.skill-main {
+    width: 100%;
+}
+
+.skill-bar {
+    margin-bottom: 2.3rem;
+
+}
+
+.skill-main h3 {
+    color: #0e2431;
+    margin-bottom: 2rem;
+    font-size: 24px;
+    text-align: center;
+}
+
+.my-skills .skill-bar .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.my-skills .skill-bar .bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 25px;
+    background-color: #0e2431;
+    margin-top: 10px;
+    position: relative;
+}
+
+.skill-bar .bar span {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: #00F5FF;
+    border-radius: 25px;
+    box-shadow: 0 0 5rem var(#00F5FF);
+}
+
+.skill-bar .bar .html {
+    width: 64%;
+    animation: html 2s;
+}
+
+.skill-bar .bar .css {
+    width: 90%;
+    animation: css 4s;
+}
+
+
+.skill-bar .bar .js {
+    width: 42%;
+    animation: js 5s;
+}
+
+@keyframes html {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 64%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes js {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 42%;
+    }
+}
+
+/* Contact */
+.contact {
+    background-color: #00F5FF;
+}
+.contact span {
+    color: white;
+}
+.contact-header{
+    font-size: 64px;
+}
+.contact h2 {
+    margin-bottom: 3rem;
+    color: #0e2431;
+}
+.contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1rem;
+    color: #0e2431;
+    border-radius: 2rem;
+    border: 2px solid var(black);
+    margin: 1.5rem 0;
+    resize: none;
+}
+
+.input-items2 .btn {
+    background-color: black;
+}
+
+.input-items2 .btn:hover{
+    background-color: #00F5FF;
+}
+
+.footer {
+    background-color: rgb(81, 81, 81);
+    padding: 50px 0;
+}
+
+.footer .icon {
+    text-align: center;
+    color: #fff;
+}
+
+.footer ul {
+    text-align: center;
+    font-size: 1.8rem;
+}
+.footer ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid var(#0e2431);
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .navbar .navigation {
+        display: flex;
+    }
+
+    .nav-items {
+        display: flex;
+        gap: 30px;
+    }
+
+    .home-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .home-img {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .about-text {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .timeline-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .timeline-item {
+        width: 45%;
+        margin: 10px;
+    }
+
+    .my-skills {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .skill-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .input-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-box {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .input-items2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-container {
+        flex-direction: row;
+    }
+
+    .home-img {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .about-text {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .timeline-item {
+        width: 30%;
+        margin: 20px;
+    }
+
+    .my-skills {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+
+/* togel */
+.toggel,
+.menu2 {
+    display: none;
+}
+
+
+
+.togel {
+    display: none;
+    flex-direction: column;
+    height: 28px;
+    justify-content: space-between;
+}
+
+.togel input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: auto;
+
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.togel span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: aqua;
+    border-radius: 3px;
+    right: 5px;
+    transition: all 0.3s;
+
+}
+
+.togel span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.togel span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.togel input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(1px, -5px);
+}
+
+.togel input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+}
+
+.togel input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(8px, -5px);
+}
+
+/* akhir togel */
+
+
+@media screen and (max-width: 1000px) {
+    
+
+    .nav-items {
+        display: none;
+    }
+
+    /* togel */
+    .togel {
+        display: flex;
+    }
+    
+    .togel span {
+        margin-right: 30px;
+        
+    }
+    
+    .menu2 {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.186);
+        top: -5000px;
+        width: 100%;
+        left: 0;
+        height: 1;
+        margin-top: 20px;
+        
+    }
+    .togel ul li {
+        padding: 50px;
+        text-align: center;
+        
+    }
+    
+    .togel ul li a {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        transition: 0.8;
+    }
+
+    .togel ul li:hover {
+        transform: scale(1.3) translateY(-5px);
+    
+    }
+
+    .togel input:checked ~ .menu2 {
+        top: -20px;
+        transition: 1s;
+
+    }
+
+    .judul-utama input {
+        position: absolute;
+        left: 91%;
+        opacity: 0;
+        top: 17px;
+        margin-right: 0;
+        z-index: 111;
+    }
+    /* akhir togel */
+
+}
+
+
+@media screen and (max-width: 500px) {
+    .home-container{
+        padding-right: 190px;
+    }
+
+    .about{
+        width: 250px;
+        margin-left: 0px;
+    
+    }
+
+
+    .about-header h2{
+        font-size: 30px;
+    }
+
+    .about-text p{
+        font-size: 15px;
+    }
+
+    .timeline-items::before,.timeline-dot{
+        display: none;
+    }
+
+    .skill-main{
+        padding-left: 20px;
+    }
+
+    .skills-header{
+        padding-left: 30px;
+    }
+
+    .input-items2 {
+        display: none;
+    }
+
+    .contact form .input-box input{
+    
+        width: 50%;
+    }
+
+    .contact,.footer{
+        margin-right: -80px;
+    }
+
+    .timeline-content{
+        height: 350px;
+    }
+
+    #item1{ margin-left: 50px;
+            width: 200px;
+    }
+    #item2{margin-left: -150px;
+    }
+    #item3{ margin-left: 50px;
+        width: 200px;}
+    #item4{margin-left: -150px;
+    }
+
+    .education h2{
+        font-size: 50px;
+    }
+
+    .about,.home,.education,.skills,.contact{
+        overflow: hidden;
+    }
+} 
+
